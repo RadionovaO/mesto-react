@@ -10,3 +10,4 @@
 6. React
 
 ## Ccылка на сайт в GitHub Pages:
+https://github.com/RadionovaO/mesto-react/
