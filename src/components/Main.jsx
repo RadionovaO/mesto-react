@@ -15,7 +15,6 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick}) {
                 setUserName(usersData.name);
                 setUserDescription(usersData.about);
                 setUserAvatar(usersData.avatar);
-                // myId = usersData._id;
                 setCards(cardSection);
             })
                 .catch((err) => {
@@ -39,23 +38,14 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick}) {
                 <button className="profile__add-button" onClick={onAddPlace} type="button"></button>
             </section>
 
-            <section className="elements">
-                
+            <section className="elements">                
                     {cards.map((card) => (
                         <Card
                             card={card}
-                            name={card.name}
-                            link={card.link}
-                            alt={card.name}
-                            key={card._id}
-                            count={card.likes.length}
-                            onCardClick={onCardClick}>
-                            
+                            onCardClick={onCardClick}>    
                         </Card>
-                    ))}
-              
+                    ))}             
             </section>
-
         </main>
     );
 };

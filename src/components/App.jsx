@@ -5,15 +5,12 @@ import Main from './Main.jsx';
 import PopupWithForm from './PopupWithForm.jsx';
 import ImagePopup from './ImagePopup.jsx';
 
-
 function App() {
 
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
     const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
-
-
 
     function handleEditAvatarClick() {
         setIsEditAvatarPopupOpen(true);
@@ -81,8 +78,7 @@ function App() {
                     id='work__input'
                 />
                 <span className='popup__input-error' id='work__input-error'></span>
-            </PopupWithForm>
-          
+            </PopupWithForm>         
 
             <PopupWithForm
                 name='add'
