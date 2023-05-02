@@ -2,7 +2,6 @@ class Api {
     constructor({ baseUrl, headers }) {
         this.baseUrl = baseUrl;
         this.headers = headers;
-        //this.authorization = headers.authorization;
     };
 
     _checkResponse(res) {
@@ -38,7 +37,7 @@ class Api {
 
             body: JSON.stringify({
                 name: userData.name,
-                about: userData.work,
+                about: userData.about,
             }),
         })
         .then((res) => this._checkResponse(res));
@@ -52,7 +51,7 @@ class Api {
             'Content-Type': 'application/json',
 
             body: JSON.stringify({
-                name: card.title,
+                name: card.name,
                 link: card.link,
             }),
         })
@@ -97,7 +96,7 @@ class Api {
             'Content-Type': 'application/json',
           
             body: JSON.stringify({
-                avatar: data.link,
+                avatar: data.avatar,
             }),
         })
         .then((res) => this._checkResponse(res));
